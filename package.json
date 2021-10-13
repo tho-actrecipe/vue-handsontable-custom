@@ -61,7 +61,8 @@
     "vue-template-compiler": "^2.5.0",
     "@vue/compiler-sfc": "^3.2.20",
     "webpack": "^5.58.1",
-    "serialize-javascript": "^5.0.1"
+    "serialize-javascript": "^5.0.1",
+    "set-value": ">=4.0.1"
   },
   "scripts": {
     "build": "npm run delete-build && npm run build:commonjs && npm run build:es && npm run build:umd && npm run build:min",
