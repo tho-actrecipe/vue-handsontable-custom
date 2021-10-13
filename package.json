@@ -1,0 +1,102 @@
+{
+  "name": "vue-handsontable-custom",
+  "version": "3.1.5",
+  "description": "Data Grid for Vue with Spreadsheet Look and Feel.",
+  "author": "Handsoncode and Tho Nguyen",
+  "license": "MIT",
+  "main": "./commonjs/vue-handsontable.js",
+  "module": "./es/vue-handsontable.js",
+  "jsdelivr": "./dist/vue-handsontable.min.js",
+  "unpkg": "./dist/vue-handsontable.min.js",
+  "types": "./index.d.ts",
+  "keywords": [
+    "data table",
+    "data grid",
+    "spreadsheet",
+    "sheet",
+    "excel",
+    "vue",
+    "vue component",
+    "vue grid",
+    "csv"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tho-asterist/vue-handsontable-custom.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tho-asterist/vue-handsontable-custom/issues"
+  },
+  "peerDependencies": {
+    "handsontable-custom": ">=6.2.4",
+    "vue": ">=2.5.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.15.7",
+    "@babel/core": "^7.15.8",
+    "@babel/plugin-transform-runtime": "^7.15.8",
+    "@babel/polyfill": "^7.12.1",
+    "@babel/preset-env": "^7.15.8",
+    "@babel/preset-typescript": "^7.15.0",
+    "@babel/runtime": "^7.15.4",
+    "@types/jest": "^26.0.24",
+    "babel-core": "^7.0.0-bridge.0",
+    "cpy-cli": "^3.1.1",
+    "cross-env": "^7.0.3",
+    "css-loader": "^6.4.0",
+    "del-cli": "^4.0.1",
+    "handsontable-custom": "^6.2.4",
+    "jest": "^26.6.3",
+    "rollup": "^1.32.1",
+    "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-json": "^4.0.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-replace": "^2.2.0",
+    "rollup-plugin-typescript2": "^0.30.0",
+    "rollup-plugin-uglify": "^6.0.4",
+    "rollup-plugin-vue": "^6.0.0",
+    "typescript": "^4.4.4",
+    "vue": "^2.5.0",
+    "vue-template-compiler": "^2.5.0",
+    "@vue/compiler-sfc": "^3.2.20",
+    "webpack": "^5.58.1",
+    "serialize-javascript": "^5.0.1"
+  },
+  "scripts": {
+    "build": "npm run delete-build && npm run build:commonjs && npm run build:es && npm run build:umd && npm run build:min",
+    "build:commonjs": "cross-env NODE_ENV=cjs rollup -c",
+    "build:umd": "cross-env NODE_ENV=umd rollup -c",
+    "build:es": "cross-env NODE_ENV=es rollup -c",
+    "build:min": "cross-env NODE_ENV=min rollup -c",
+    "delete-build": "del-cli ./es/ && del-cli ./commonjs/ && del-cli ./dist/ && del-cli ./*.d.ts",
+    "publish-build": "npm publish",
+    "publish-all": "npm run build && npm run publish-build && npm run delete-build",
+    "test": "jest"
+  },
+  "jest": {
+    "testURL": "http://localhost/",
+    "transform": {
+      "^.+\\.ts?$": "babel-jest",
+      "^.+\\.js$": "babel-jest"
+    },
+    "testRegex": "(/test/(.*).(test|spec)).(js?|ts?)$",
+    "moduleFileExtensions": [
+      "ts",
+      "js",
+      "json",
+      "node"
+    ],
+    "globals": {
+      "ts-jest": {
+        "tsConfig": "test-tsconfig.json",
+        "babelConfig": true
+      }
+    }
+  },
+  "homepage": "https://github.com/tho-asterist/vue-handsontable-custom#readme",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {}
+}
