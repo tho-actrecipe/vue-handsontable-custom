@@ -1,6 +1,6 @@
 {
   "name": "vue-handsontable-custom",
-  "version": "3.1.8",
+  "version": "6.4.0",
   "description": "Data Grid for Vue with Spreadsheet Look and Feel.",
   "author": "Handsoncode and Tho Nguyen",
   "license": "MIT",
@@ -28,8 +28,8 @@
     "url": "https://github.com/tho-asterist/vue-handsontable-custom/issues"
   },
   "peerDependencies": {
-    "handsontable-custom": ">=6.2.4",
-    "vue": ">=2.5.0"
+    "handsontable-custom": ">=6.4.0",
+    "vue": ">=2.6.7"
   },
   "devDependencies": {
     "@babel/cli": "^7.15.7",
@@ -45,7 +45,7 @@
     "cross-env": "^7.0.3",
     "css-loader": "^0.28.11",
     "del-cli": "^1.1.0",
-    "handsontable-custom": "^6.2.4",
+    "handsontable-custom": "^6.4.0",
     "jest": "^26.6.3",
     "rollup": "^1.32.1",
     "rollup-plugin-babel": "^4.4.0",
